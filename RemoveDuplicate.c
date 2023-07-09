@@ -9,4 +9,9 @@ int removeDuplicates(int* nums, int numsSize){
                count++;
           }
   }
+  expectedNums[j++] = nums[numsSize - 1];
+  for(int i = 0;i < j; i++){
+        nums[i] = expectedNums[i];
+  }
+  return count;
 }
