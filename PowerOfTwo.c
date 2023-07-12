@@ -8,4 +8,13 @@ bool isPowerOfTwo(int n){
         return false;
     if(n == 1 || n == 2){
         return true;
+    if(n > 2){
+        while(n != 1){
+            rem = n % 2;
+            if(rem != 0)
+                return false;
+            n = n / 2;
+        }
+    }
+    return true;
 }
