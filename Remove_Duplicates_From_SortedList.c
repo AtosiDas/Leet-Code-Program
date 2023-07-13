@@ -8,6 +8,13 @@ once. Return the linked list sorted as well.
  * };
  */
 struct ListNode* deleteDuplicates(struct ListNode* head){
-
+    struct ListNode* temp = head;
+    while(temp != NULL) {
+        while(temp->next != NULL && temp->val == temp->next->val){
+            temp->next = temp->next->next;
+        }
+    temp = temp->next;
+    }
+    return head;
 }
 
