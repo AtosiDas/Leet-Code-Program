@@ -6,5 +6,10 @@ Return the running sum of nums.
  * @return {number[]}
  */
 var runningSum = function(nums) {
-
+    var output = [];
+    output.push(nums[0]);
+    for(var i = 1; i < nums.length; i++){
+        output.push(nums[i] + output[i-1]);
+    }
+    return output;
 }
