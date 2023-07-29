@@ -12,4 +12,4 @@ var runningSum = function(nums) {
         output.push(nums[i] + output[i-1]);
     }
     return output;
-}
+};
