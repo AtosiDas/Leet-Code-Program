@@ -13,5 +13,20 @@ Return the maximum score you can achieve after performing the operation exactly 
  * @return {number}
  */
 var maximizeSum = function(nums, k) {
-
+    var score = 0;
+    var max = nums[0];
+    var count = 0;
+    for(var j = 0; j < k; j++){
+        max = nums[0];
+        for(var i = 1; i < nums.length; i++){
+            if(max < nums[i]){
+                max = nums[i];
+                count = i;
+            }
+        }
+        score += max;
+        nums[count] = max + 1;
+        count = 0;
+    }
+    return score;
 };
