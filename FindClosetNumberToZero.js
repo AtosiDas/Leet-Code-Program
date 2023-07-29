@@ -20,4 +20,4 @@ var findClosestNumber = function(nums) {
         }
     }
     return nums[count];
-}
+};
