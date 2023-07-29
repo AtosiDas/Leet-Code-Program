@@ -6,3 +6,12 @@ Remove the selected element m from the array.
 Add a new element with a value of m + 1 to the array.
 Increase your score by m.
 Return the maximum score you can achieve after performing the operation exactly k times.
+
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number}
+ */
+var maximizeSum = function(nums, k) {
+
+};
