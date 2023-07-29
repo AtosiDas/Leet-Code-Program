@@ -9,6 +9,29 @@ for each l <= i < r, nums[i] < nums[i + 1].
  * @param {number[]} nums
  * @return {number}
  */
-var findLengthOfLCIS = function(nums) {
 
+function maximum(num1,num2){
+    if(num1 < num2){
+        return num2;
+    }
+    else{
+        return num1;
+    }
+}
+
+var findLengthOfLCIS = function(nums) {
+    var count = 1;
+    var max = 0;
+    for(var i = 0; i < nums.length; i++){
+        for(var j = i; j < nums.length; j++){
+            if(nums[j] < nums[j+1]){
+                count++;
+            }else{
+                break;
+            }
+        }
+        max = maximum(max,count);
+        count = 1;
+    }
+    return max;
 };
